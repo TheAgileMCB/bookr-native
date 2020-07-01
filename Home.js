@@ -7,41 +7,8 @@ import {
     Dimensions,
     View,
 } from 'react-native';
-// import './assets/balanced-stones.jpg';
 
 const image = { uri: "./assets/balanced-stones.jpg" };
-// import MapView from 'react-native-maps';
-
-// const {width, height} = Dimensions.get('window')
-
-// const SCREEN_HEIGHT = height
-// const SCREEN_WIDTH = width
-// const ASPECT_RATIO = width / height
-// const LATITUDE_DELTA = 0.0922
-// const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
-
-// function HomeScreen() {
-//   return (
-//     <View style={styles.container}>
-//           <Button
-//             title="Locate Me!"
-//             onPress={(navigation) =>
-//               navigation.navigate('Map', { name: 'map' })
-//             }
-//           />
-//     </View>
-//   );
-// }
-
-// function MapScreen() {
-//   return (
-//     <View style={styles.container}>
-//       <Map />
-//     </View>
-//   )
-// }
-
-// const Stack = createStackNavigator();
 
 export default class Home extends React.Component {
     render() {
