@@ -72,10 +72,10 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
     text: {
-        padding: 5,
+        padding: 15,
     },
     button: {
-        padding: 15,
+        margin: 15,
     },
     radius: {
         height: 50,
