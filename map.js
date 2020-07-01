@@ -26,9 +26,6 @@ export default class Map extends Component {
               latitude: 41.977879,
               longitude: -91.665627,
             }}>
-              <View style={styles.radius}>
-                <View style={styles.marker} />
-              </View>
           </MapView.Marker>
         </MapView>
       </View>
@@ -37,26 +34,6 @@ export default class Map extends Component {
 }
 
 const styles = StyleSheet.create({
-  radius: {
-    height: 50,
-    width: 50,
-    borderRadius: 50/2,
-    overflow: 'hidden',
-    backgroundColor: 'rgba(0, 122, 255, 0.1)',
-    borderWidth: 1,
-    borderColor: 'rgba(0, 112, 255, 0.3)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  marker: {
-    height: 20,
-    width:20,
-    borderWidth: 3,
-    borderColor: 'white',
-    borderRadius: 20/2,
-    overflow: 'hidden',
-    backgroundColor: '#007aff',
-  },
   container: {
     flex: 1,
     justifyContent: 'center',
