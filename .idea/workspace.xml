@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06d7416d-0f6d-425b-ba90-3c254083c46a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.95.1280.680/0.0.1920.1040@0.0.1920.1040" timestamp="1593606112449" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593608199737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/-1280.95.1280.680/0.0.1920.1040@0.0.1920.1040" timestamp="1593608199737" />
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1593606444912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

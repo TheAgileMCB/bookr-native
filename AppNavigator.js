@@ -4,12 +4,12 @@ import Home from './Home';
 import Map from './Maps';
 
 const RootStack = createStackNavigator({
-  Home: { 
-      screen: Home 
-    },
-    Map: { 
-        screen: Map 
-    },
+  Home: {
+    screen: Home
+  },
+  Map: {
+    screen: Map
+  },
 });
 
 const AppNavigator = createAppContainer(RootStack);

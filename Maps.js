@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   Dimensions,
@@ -9,12 +8,12 @@ import {
 
 import MapView from 'react-native-maps';
 
-const {width, height} = Dimensions.get('window')
+const { width, height } = Dimensions.get('window')
 
 const SCREEN_HEIGHT = height
 const SCREEN_WIDTH = width
 const ASPECT_RATIO = width / height
-const LATITUDE_DELTA = 0.0922
+const LATITUDE_DELTA = 0.9220
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
 
 export default class Map extends Component {
@@ -49,11 +48,11 @@ export default class Map extends Component {
         longitudeDelta: LONGITUDE_DELTA,
       }
 
-      this.setState({initialPosition: initialRegion})
-      this.setState({markerPosition: initialRegion})
+      this.setState({ initialPosition: initialRegion })
+      this.setState({ markerPosition: initialRegion })
     },
-    (error) => alert(JSON.stringify(error)),
-    {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000})
+      (error) => alert(JSON.stringify(error)),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 })
 
     this.watchID = navigator.geolocation.watchPosition((position) => {
       var lat = parseFloat(position.coords.latitude)
@@ -66,8 +65,8 @@ export default class Map extends Component {
         longitudeDelta: LONGITUDE_DELTA,
       }
 
-      this.setState({initialPosition: lastRegion})
-      this.setState({markerPosition: lastRegion})
+      this.setState({ initialPosition: lastRegion })
+      this.setState({ markerPosition: lastRegion })
     })
   }
 
