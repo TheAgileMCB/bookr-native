@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import {
-    AppRegistry,
+    ImageBackground,
     StyleSheet,
     Text,
     Button,
     Dimensions,
     View,
 } from 'react-native';
+// import './assets/balanced-stones.jpg';
 
+const image = { uri: "./assets/balanced-stones.jpg" };
 // import MapView from 'react-native-maps';
 
 // const {width, height} = Dimensions.get('window')
@@ -45,16 +47,23 @@ export default class Home extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Welcome.</Text>
-                <Text>Be at peace.</Text>
-                <Text>You have come here for one thing.</Text>
-                <Text>Press the button to seek Nirvana.</Text>
-                <Button
-                    title="Find Yourself"
-                    onPress={() =>
-                        this.props.navigation.navigate('Map')
-                    }
-                />
+                <ImageBackground
+                    style={styles.image}
+                    alt="a pleasant balanced stone form"
+                    source={image}
+                >
+                    <Text style={styles.text}>Welcome.</Text>
+                    <Text style={styles.text}>Be at peace.</Text>
+                    <Text style={styles.text}>You have come here for one thing.</Text>
+                    <Text style={styles.text}>Press the button to seek Nirvana.</Text>
+                    <Button
+                        style={styles.button}
+                        title="Find Yourself"
+                        onPress={() =>
+                            this.props.navigation.navigate('Map')
+                        }
+                    />
+                </ImageBackground>
             </View>
         );
     }
@@ -62,6 +71,12 @@ export default class Home extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    text: {
+        padding: 5,
+    },
+    button: {
+        padding: 15,
+    },
     radius: {
         height: 50,
         width: 50,
@@ -87,6 +102,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#f5fcff',
+    },
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     map: {
         left: 0,
