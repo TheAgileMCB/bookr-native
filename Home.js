@@ -7,8 +7,9 @@ import {
     Dimensions,
     View,
 } from 'react-native';
-import './assets/balanced-stones.jpg';
+// import './assets/balanced-stones.jpg';
 
+const image = { uri: "./assets/balanced-stones.jpg" };
 // import MapView from 'react-native-maps';
 
 // const {width, height} = Dimensions.get('window')
@@ -49,13 +50,14 @@ export default class Home extends React.Component {
                 <ImageBackground
                     style={styles.image}
                     alt="a pleasant balanced stone form"
-                    source="assets/balanced-stones.jpg"
+                    source={image}
                 >
                     <Text style={styles.text}>Welcome.</Text>
                     <Text style={styles.text}>Be at peace.</Text>
                     <Text style={styles.text}>You have come here for one thing.</Text>
                     <Text style={styles.text}>Press the button to seek Nirvana.</Text>
                     <Button
+                        style={styles.button}
                         title="Find Yourself"
                         onPress={() =>
                             this.props.navigation.navigate('Map')
@@ -69,6 +71,12 @@ export default class Home extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    text: {
+        padding: 5,
+    },
+    button: {
+        padding: 15,
+    },
     radius: {
         height: 50,
         width: 50,
@@ -97,6 +105,7 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
+        resizeMode: "cover",
         justifyContent: 'center',
         alignItems: 'center',
     },
