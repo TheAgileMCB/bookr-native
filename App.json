@@ -4,9 +4,9 @@
     "slug": "bookr",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/balanced-stones.jpg",
+    "icon": "./assets/stacked-stones.png",
     "splash": {
-      "image": "./assets/balanced-stones.jpg",
+      "image": "./assets/stacked-stones.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/balanced-stones.jpg"
+      "favicon": "./assets/stacked-stones.png"
     }
   }
 }
