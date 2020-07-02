@@ -7,10 +7,14 @@ import {
     //Dimensions,
     View,
 } from 'react-native';
-
+import { NavigationStackProp } from 'react-navigation-stack';
 const image = { uri: "./assets/balanced-stones.jpg" };
 
-export default class Home extends React.Component {
+type Props = {
+  navigation: NavigationStackProp<{ home: string }>;
+}
+
+export default class Home extends React.Component<NavigationStackProp<Props>> {
     render() {
         return (
             <View style={styles.container}>
@@ -27,7 +31,7 @@ export default class Home extends React.Component {
                     <Button
                         title="Find Yourself"
                         onPress={() =>
-                            this.props.navigation.navigate('Map')
+                            this.props.navigate('Map')
                         }
                     />
                 </ImageBackground>
