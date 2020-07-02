@@ -29,6 +29,11 @@ interface MarkerPosition {
   longitude: number;
 }
 
+interface MapState {
+  initialPosition: InitialPosition;
+  markerPosition: MarkerPosition;
+}
+
 const { width, height } = Dimensions.get('window')
 
 // const SCREEN_HEIGHT = height
@@ -37,7 +42,7 @@ const ASPECT_RATIO = width / height
 const LATITUDE_DELTA = 0.9220
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
 
-export default class Map extends Component {
+export default class Map extends Component<MapProps, MapState> {
   constructor(props: MapProps) {
     super(props)
 
@@ -55,7 +60,7 @@ export default class Map extends Component {
     }
   }
 
-  watchID: ?number = null
+  watchID: number = null
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
