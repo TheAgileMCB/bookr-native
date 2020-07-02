@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     ImageBackground,
     StyleSheet,
     Text,
     Button,
-    Dimensions,
+    //Dimensions,
     View,
 } from 'react-native';
 
@@ -15,8 +15,9 @@ export default class Home extends React.Component {
         return (
             <View style={styles.container}>
                 <ImageBackground
+                    accessible={true}
+                    accessibilityLabel="a pleasant balanced stone form"
                     style={styles.image}
-                    alt="a pleasant balanced stone form"
                     source={image}
                 >
                     <Text style={styles.text}>Welcome.</Text>
@@ -24,7 +25,6 @@ export default class Home extends React.Component {
                     <Text style={styles.text}>You have come here for one thing.</Text>
                     <Text style={styles.text}>Press the button to seek Nirvana.</Text>
                     <Button
-                        style={styles.button}
                         title="Find Yourself"
                         onPress={() =>
                             this.props.navigation.navigate('Map')
@@ -40,9 +40,6 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
     text: {
         padding: 15,
-    },
-    button: {
-        margin: 15,
     },
     radius: {
         height: 50,

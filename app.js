@@ -1,11 +1,2 @@
-import React from 'react';
-import AppNavigator from './AppNavigator';
-
-export default class App extends React.Component {
-
-  render() {
-    return (
-      <AppNavigator />
-    );
-  }
-}
+import App from './build/App';
+export default App;
