@@ -1,23 +1,44 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
+  // Text,
   Dimensions,
   View,
 } from 'react-native';
 
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
+
+interface MapProps {
+  initialPosition: {
+    [key: string]: InitialPosition
+  };
+  markerPosition: {
+    [key: string]: MarkerPosition
+  };
+}
+
+interface InitialPosition {
+  latitude: number;
+  longitude: number;
+  latitudeDelta: number;
+  longitudeDelta: number;
+}
+
+interface MarkerPosition {
+  latitude: number;
+  longitude: number;
+}
 
 const { width, height } = Dimensions.get('window')
 
-const SCREEN_HEIGHT = height
-const SCREEN_WIDTH = width
+// const SCREEN_HEIGHT = height
+// const SCREEN_WIDTH = width
 const ASPECT_RATIO = width / height
 const LATITUDE_DELTA = 0.9220
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
 
 export default class Map extends Component {
-  constructor(props) {
+  constructor(props: MapProps) {
     super(props)
 
     this.state = {
@@ -38,8 +59,8 @@ export default class Map extends Component {
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
-      var lat = parseFloat(position.coords.latitude)
-      var long = parseFloat(position.coords.longitude)
+      var lat = position.coords.latitude
+      var long = position.coords.longitude
 
       var initialRegion = {
         latitude: lat,
@@ -55,8 +76,8 @@ export default class Map extends Component {
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 })
 
     this.watchID = navigator.geolocation.watchPosition((position) => {
-      var lat = parseFloat(position.coords.latitude)
-      var long = parseFloat(position.coords.longitude)
+      var lat = position.coords.latitude
+      var long = position.coords.longitude
 
       var lastRegion = {
         latitude: lat,
@@ -81,13 +102,13 @@ export default class Map extends Component {
           style={styles.map}
           region={this.state.initialPosition}>
 
-          <MapView.Marker
+          <Marker
             coordinate={this.state.markerPosition}>
             <View style={styles.radius}>
               <View style={styles.marker}>
               </View>
             </View>
-          </MapView.Marker>
+          </Marker>
         </MapView>
       </View>
     );
