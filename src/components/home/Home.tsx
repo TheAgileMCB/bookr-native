@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    ImageBackground,
     StyleSheet,
     Text,
     Button,
@@ -8,33 +7,44 @@ import {
     View,
 } from 'react-native';
 import { NavigationStackProp } from 'react-navigation-stack';
+import { LinearGradient } from 'expo-linear-gradient';
 const image = { uri: "./assets/balanced-stones.jpg" };
 
 type NavProps = {
-  navigation: NavigationStackProp<{ home: string }>;
+    navigation: NavigationStackProp<{ home: string }>;
 }
 
 export default class Home extends React.Component<NavProps> {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground
-                    accessible={true}
-                    accessibilityLabel="a pleasant balanced stone form"
-                    style={styles.image}
-                    source={image}
-                >
-                    <Text style={styles.text}>Welcome.</Text>
-                    <Text style={styles.text}>Be at peace.</Text>
-                    <Text style={styles.text}>You have come here for one thing.</Text>
-                    <Text style={styles.text}>Press the button to seek Nirvana.</Text>
-                    <Button
-                        title="Find Yourself"
-                        onPress={() =>
-                            this.props.navigation.navigate('Map')
-                        }
-                    />
-                </ImageBackground>
+                <LinearGradient
+                    colors={['rgba(70,10,10,0.8)', 'transparent']}
+                    style={{
+                        position: 'absolute',
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        height: 500,
+                      }}
+                />
+                <LinearGradient
+          colors={['#c08e0f', '#e6b947', '#ac7d07']}
+          style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}>
+          <Text
+          onPress={() =>
+            this.props.navigation.navigate('Map')
+        }
+            style={{
+              backgroundColor: 'transparent',
+              fontSize: 20,
+              color: '#000',
+              borderColor: '#fff',
+            }}>
+            Welcome!
+          </Text>
+        </LinearGradient>
+               
             </View>
         );
     }
@@ -69,7 +79,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f5fcff',
+        backgroundColor: '#750303',
     },
     image: {
         flex: 1,
