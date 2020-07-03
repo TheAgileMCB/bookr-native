@@ -1,7 +1,8 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-import Home from './Home';
-import Map from './Maps';
+import Home from '../home/Home';
+import Map from '../map/Maps';
+import Books from '../books/Books';
 
 const RootStack = createStackNavigator({
   Home: {
@@ -10,6 +11,9 @@ const RootStack = createStackNavigator({
   Map: {
     screen: Map
   },
+  Books: {
+    screen: Books
+  }
 });
 
 const AppNavigator = createAppContainer(RootStack);
