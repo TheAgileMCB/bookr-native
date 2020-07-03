@@ -28,6 +28,12 @@ export default class Home extends React.Component<NavProps> {
                         height: 500,
                     }}
                 />
+                <Text style={styles.heading}>
+                    Bookr
+                    </Text>
+                <Text style={styles.subheading}>
+                    Mobile
+                </Text>
                 <LinearGradient
                     colors={['#c08e0f', '#e6b947', '#ac7d07']}
                     style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}>
@@ -70,6 +76,16 @@ export default class Home extends React.Component<NavProps> {
 const styles = StyleSheet.create({
     text: {
         padding: 15,
+    },
+    heading: {
+        fontSize: 100,
+        color: '#fff',
+        marginBottom: -20,
+    },
+    subheading: {
+        fontSize: 30,
+        color: '#fff',
+        marginBottom: 100,
     },
     radius: {
         height: 50,
