@@ -38,7 +38,7 @@ export default class Books extends Component<BookProps> {
         return (
             <View>
                 <GoogleBookSearch
-                    apikey={"BOOK_KEY"}
+                    apikey={"AIzaSyDBvBSx_sAV1JbOj7Vwir6xG19ylfK4KUI"}
                     onResultPress={(book: BookProps) => console.log(book)}
                 />
             </View>
