@@ -1,4 +1,5 @@
-# :space_invader: React Native Template TypeScript
+# :books: Bookr Mobile
+Your mobile "To Read" collection
 
 <p>
   <a href="https://travis-ci.org/react-native-community/react-native-template-typescript">
@@ -17,13 +18,13 @@
 
 > Clean and minimalist React Native template for a quick start with TypeScript.
 
-## :star: Features
+## :bookmark: Features
 
 - Elegant usage directly within the [React Native CLI](https://github.com/react-native-community/cli)
 - Consistent with the default React Native template
 - Minimal additional dependencies
 
-## :arrow_forward: Usage
+## :book: Usage
 
 ### Note on the legacy CLI
 There seems to be quite some confusion about the legacy CLI. This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`), for the below command to work. If you wish to not use `npx`, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
