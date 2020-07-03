@@ -26,25 +26,41 @@ export default class Home extends React.Component<NavProps> {
                         right: 0,
                         top: 0,
                         height: 500,
-                      }}
+                    }}
                 />
                 <LinearGradient
-          colors={['#c08e0f', '#e6b947', '#ac7d07']}
-          style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}>
-          <Text
-          onPress={() =>
-            this.props.navigation.navigate('Map')
-        }
-            style={{
-              backgroundColor: 'transparent',
-              fontSize: 20,
-              color: '#000',
-              borderColor: '#fff',
-            }}>
-            Welcome!
-          </Text>
-        </LinearGradient>
-               
+                    colors={['#c08e0f', '#e6b947', '#ac7d07']}
+                    style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}>
+                    <Text
+                        onPress={() =>
+                            this.props.navigation.navigate('Books')
+                        }
+                        style={{
+                            backgroundColor: 'transparent',
+                            fontSize: 20,
+                            color: '#000',
+                            borderColor: '#fff',
+                        }}>
+                        Find Books!
+                    </Text>
+                </LinearGradient>
+                <Text></Text>
+                <LinearGradient
+                    colors={['#c08e0f', '#e6b947', '#ac7d07']}
+                    style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}>
+                    <Text
+                        onPress={() =>
+                            this.props.navigation.navigate('Map')
+                        }
+                        style={{
+                            backgroundColor: 'transparent',
+                            fontSize: 20,
+                            color: '#000',
+                            borderColor: '#fff',
+                        }}>
+                        Find Yourself!
+                    </Text>
+                </LinearGradient>
             </View>
         );
     }
